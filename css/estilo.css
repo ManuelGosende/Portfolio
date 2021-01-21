@@ -1,0 +1,387 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    margin: 0;
+    background-color: #1F1F1F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.displayVert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.displayHoriz {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.colorNegro {
+    color: #1F1F1F;
+}
+
+.colorBlanco {
+    color: #ffffff;
+}
+
+.colorAzul {
+    color: #0A4559;
+}
+
+.colorCeleste {
+    color: #338584;
+}
+
+.colorNaranja {
+    color: #D4724E;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: smaller;
+}
+
+p, h1, h2, h3 {
+    margin: 2px;
+    text-align: justify;
+}
+
+.foto {
+    background-image: url("../imagenes/perfil.png");
+    width: 181px;
+    height: 181px;
+}
+
+.servicios, .pre-visualizacion, .visualizacion, .contenedor-videos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pre-visualizacion, .visualizacion {
+    justify-content: start;
+}
+
+.visualizacion img, .visualizacion video {
+    margin: 2%;
+}
+
+.contenedor-texto-videos {
+    width: 100%;
+}
+
+.contenedor-videos {
+    width: 100%;
+    justify-content: center;
+}
+
+.servicios  {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.sobreMi {
+    border: solid 2px #338584;
+    border-radius: 30px;
+    padding: 15px;
+    margin-bottom: 40px;
+}
+
+.contenedor-texto-sobremi {
+    width: 650px;
+    align-items: flex-start;
+    padding: 3% 3% 0 3%;
+}
+
+.sobreMi .displayHoriz p, .servicio {
+    width: 300px;
+}
+
+.trabajo {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    margin: 1%;
+}
+
+.contenedor-back {
+    width: 30px;
+}
+
+.back {
+    width: 10px;
+    height: 19px;
+    background-image: url("../imagenes/back.png");
+    background-size: 100%;
+}
+
+/* PREVISUALIZACIÓN DE TRABAJO */
+
+.botinessolidarios, .farmaavellaneda, .surfeatsleep, .lasandwicheria, .rmdistribuidora, .anabelaltuna, .carpentry, .jump {
+    width: 400px;
+    height: 400px;
+    background-size: 100%;
+}
+
+.botinessolidarios {
+    background-image: url("../imagenes/botinessolidarios.jpg");
+}
+
+.farmaavellaneda {
+    background-image: url("../imagenes/farmaciaavellaneda.jpg");
+}
+
+.surfeatsleep {
+    background-image: url("../imagenes/surfeatsleep.jpg");
+}
+
+.lasandwicheria {
+    background-image: url("../imagenes/lasandwicheria.jpg");
+}
+
+.rmdistribuidora {
+    background-image: url("../imagenes/rmdistribuidora.jpg");
+}
+
+.anabelaltuna {
+    background-image: url("../imagenes/anabelaltuna.jpg");
+}
+
+.carpentry {
+    background-image: url("../imagenes/carpentry.jpg");
+}
+
+.jump {
+    background-image: url("../imagenes/jump.jpg");
+}
+
+/*----------------------------- Mobile -----------------------------*/
+
+@media (max-width: 450px) {
+
+    header {
+        position: fixed;
+        width: 100%;
+        padding-top: 2%;
+        background-color: #1F1F1F;
+        z-index: 50;
+    }
+    
+    .navegador {
+        display: flex;
+        justify-content: space-between;
+        padding: 3% 5%;
+    }
+    
+    #menu {
+        display: none;
+    }
+
+    #burguer {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 46px;
+        height: 19px;
+        user-select: none;
+        background-image: url("../imagenes/menu-burguer.png");
+        background-size: 100%;
+    }
+    
+    .desplegable {
+        width: 100px;
+        overflow: hidden;
+        position: fixed;
+        display: -moz-inline-grid;
+        background-color: #1F1F1F;
+        border-radius: 0 0 30px 0;
+        margin-top: 45px;
+        box-shadow: 3px 3px 5px #1a1919;
+    }
+    
+    .desplegable a {
+        margin-left: 5px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .desplegable a:hover {
+        color: rgb(134, 167, 197);
+    }
+
+    .foto {
+        transform: scale(0.8);
+    }
+
+    .perfil {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 90px;
+    }
+
+    .perfil > nav, .sobreMi, .nav-desktop {
+        display: none;
+    }
+
+    .contenedor-foto-nombre {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .servicio {
+        margin: 30px auto;
+    }
+
+    /* TRABAJOS */
+
+    .pre-visualizacion, .visualizacion {
+        margin-top: 90px;
+        justify-content: center;
+        transform: scale(0.9);
+        transform-origin: top;
+    }
+
+    .pre-visualizacion {
+        transform: scale(0.9);
+    }
+
+    .visualizacion {
+        transform: scale(0.52);
+    }
+
+}
+
+/*----------------------------- Transición -----------------------------*/
+
+@media (min-width: 450px) and (max-width: 1100px) {
+
+    header, .sobreMi {
+        display: none;
+    }
+
+    .perfil {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .contenedor-foto-nombre, .contenedor-nav-desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3%;
+    }
+
+    .nav-desktop, .contenedor-nav-desktop {
+        width: 100%;
+    }
+
+    .pre-visualizacion, .visualizacion {
+        margin-top: 90px;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+}
+
+/*----------------------------- Desktop -----------------------------*/
+
+@media (min-width: 1100px) {
+
+    header {
+        display: none;
+    }
+
+    .perfil {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .contenedor-foto-nombre, nav, .contenedor-texto-sobremi, .contenedor-nav-desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3%;
+    }
+
+    .contenedor-foto-nombre {
+        width: 500px;
+    }
+
+    nav {
+        width: 200px;
+    }
+
+    nav a, .contenedor-nav-desktop a {
+        text-decoration: none;
+    }
+
+    .servicio {
+        margin-bottom: 30px;
+    }
+
+    /* TRABAJOS */
+
+    .pre-visualizacion, .visualizacion {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-desktop, .contenedor-nav-desktop {
+        width: 100%;
+    }
+
+    .nav-desktop {
+        margin-bottom: 40px;
+    }
+
+    .contenedor-nav-desktop {
+        padding: 0;
+    }
+
+    .contenedor-nav-desktop h1, .contenedor-nav-desktop h2 {
+        margin: 2%;
+    }
+
+    .contenedor-nav-desktop h1 {
+        width: 100%;
+    }
+
+    .botinessolidarios:hover, .farmaavellaneda:hover, .surfeatsleep:hover, .lasandwicheria:hover, .rmdistribuidora:hover, .anabelaltuna:hover, .carpentry:hover, .jump:hover {
+        animation-name: aumentarTam;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes aumentarTam {
+        from {
+            transform: scale(1);
+        } 
+        to {
+            transform: scale(1.09);
+        }
+    }
+
+}
